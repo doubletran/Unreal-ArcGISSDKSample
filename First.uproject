@@ -12,7 +12,8 @@
 				"Engine",
 				"UMG",
 				"ChaosVehicles",
-				"ArcGISSamples"
+				"ArcGISSamples",
+				"PCG"
 			]
 		}
 	],
