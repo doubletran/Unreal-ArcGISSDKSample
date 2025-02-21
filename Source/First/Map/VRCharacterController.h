@@ -79,13 +79,13 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Variables", meta = (AllowPrivateAccess = "true"))
 	UMotionControllerComponent* rightMotionControllerInteractor;
 	TEnumAsByte<EHMDTrackingOrigin::Type> TrackingOrigin;
-	UInputMappingContext* mappingContext = LoadObject<UInputMappingContext>(nullptr, TEXT("InputMappingContext'/Game/Map/VR/Input/IMC_Default.IMC_Default'"));
-	UInputAction* move_X = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/VR/Input/IA_MoveX.IA_MoveX'"));
-	UInputAction* move_Y = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/VR/Input/IA_MoveY.IA_MoveY'"));
-	UInputAction* move_Z = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/VR/Input/IA_MoveUp.IA_MoveUp'"));
-	UInputAction* turn = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/VR/Input/IA_Turn.IA_Turn'"));
+	UInputMappingContext* mappingContext = LoadObject<UInputMappingContext>(nullptr, TEXT("InputMappingContext'/Game/SampleViewer/VR/Input/IMC_Default.IMC_Default'"));
+	UInputAction* move_X = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/VR/Input/IA_MoveX.IA_MoveX'"));
+	UInputAction* move_Y = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/VR/Input/IA_MoveY.IA_MoveY'"));
+	UInputAction* move_Z = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/VR/Input/IA_MoveUp.IA_MoveUp'"));
+	UInputAction* turn = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/VR/Input/IA_Turn.IA_Turn'"));
 
-	UInputAction* clickRight = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/VR/Input/IA_Menu_Cursor_Right.IA_Menu_Cursor_Right'"));
+	UInputAction* clickRight = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/VR/Input/IA_Menu_Cursor_Right.IA_Menu_Cursor_Right'"));
 
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Variables", meta = (AllowPrivateAccess = "true"))

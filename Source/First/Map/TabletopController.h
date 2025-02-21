@@ -53,12 +53,12 @@ private:
 	const float MinZoomIncrement{ 4. };
 	float ZoomLevel;
 
-	UInputAction* grip = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/XRTableTop/Input/IA_Grip_Right.IA_Grip_Right'"));
-	UInputAction *trigger = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/XRTableTop/Input/IA_Pan_Right.IA_Pan_Right'"));
-	UInputAction* spin = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/XRTableTop/Input/IA_Spin.IA_Spin'"));
-	UInputAction* move_X = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/VR/Input/IA_MoveX.IA_MoveX'"));
-	UInputAction* move_Y = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/Map/VR/Input/IA_MoveY.IA_MoveY'"));
-	UInputMappingContext* inputContext = LoadObject<UInputMappingContext>(nullptr, TEXT("InputMappingContext'/Game/Map/XRTableTop/Input/IAC_XRTableTop.IAC_XRTableTop'"));
+	UInputAction* grip = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/XRTableTop/Input/IA_Grip_Right.IA_Grip_Right'"));
+	UInputAction* trigger = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/XRTableTop/Input/IA_Pan_Right.IA_Pan_Right'"));
+	UInputAction* spin = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/XRTableTop/Input/IA_Spin.IA_Spin'"));
+	UInputAction* move_X =  LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/VR/Input/IA_MoveX.IA_MoveX'"));
+	UInputAction* move_Y = LoadObject<UInputAction>(nullptr, TEXT("InputAction'/Game/SampleViewer/VR/Input/IA_MoveY.IA_MoveY'"));
+	UInputMappingContext* inputContext=  LoadObject<UInputMappingContext>(nullptr, TEXT("InputMappingContext'/Game/SampleViewer/XRTableTop/Input/IAC_XRTableTop.IAC_XRTableTop'"));
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Variables", meta = (AllowPrivateAccess = "true"))

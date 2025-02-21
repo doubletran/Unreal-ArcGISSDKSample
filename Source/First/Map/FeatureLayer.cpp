@@ -57,7 +57,7 @@ void AFeatureLayer::SendFeatureAmenityQuery() {
 	
 	FHttpRequestRef Request = FHttpModule::Get().CreateRequest();
 	UE_LOG(LogTemp, Log, TEXT("SENDING"));
-	FString Query = "https://services6.arcgis.com/Do88DoK2xjTUCXd1/arcgis/rest/services/OSM_NA_Amenities/FeatureServer/0/query?f=geojson&where=amenity=%27restaurant%27&outfields=*&ervices/OSM_NA_Amenities/FeatureServer/0/query?f=json&geometryType=esriGeometryEnvelope&geometry=-74.2591,40.4774,-73.7004,40.9176&resultRecordCount=50";
+	FString Query = "https://services6.arcgis.com/Do88DoK2xjTUCXd1/arcgis/rest/services/OSM_NA_Amenities/FeatureServer/0/query?f=geojson&where=amenity=%27restaurant%27&outfields=*&geometryType=esriGeometryEnvelope&geometry=-74.2591,40.4774,-73.7004,40.9176&resultRecordCount=50";
 	Request->OnProcessRequestComplete().BindUObject(this, &AFeatureLayer::ProcessResponse);
 	float xmin = -74.2591f;
 	float ymin = 40.4774;
@@ -171,9 +171,10 @@ void AFeatureLayer::SetMaterial() {
 	// In Unreal Engine, open this material in the Material Editor to view the shader graph
 	// In general, you can use this function in other scripts to change the material thats used to render the buildings
 	layer->SetMaterialReference(
-		LoadObject<UMaterial>(this, TEXT("Material'/Game/SampleViewer/Samples/MaterialByAttribute/Materials/BuildingNameRenderer.BuildingNameRenderer'")));
+		LoadObject<UMaterial>(this, TEXT("Material'/Game/SampleViewer/FeatureQuery/Materials/BuildingNameRenderer.BuildingNameRenderer'")));
 	MapComponent->GetLayers()->Add(layer);
 }
+
 void AFeatureLayer::SetFeatureAttribute(TArray<FHitResult>hits)
 {
 	UArcGISMapComponent* MapComponent = UArcGISMapComponent::GetMapComponent(this);
