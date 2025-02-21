@@ -5,7 +5,7 @@ Using ArcGIS SDK in Unreal Engine
 + BuildingSceneLayerActor (C++ class) handle layer initialization, generate building filter query by attribute and toggle layer’s visibility
 + Menu interface (Widget Blueprint) that take the discipline list from the actor class to populate selections
 ![Building](./Picture/BuildingLevel1.png)
-![Building2](./Picture/BuildingLevel22.png)
+![Building2](./Picture/BuildingLevel2.png)
 2.	VR Map level: Users can ‘fly’ in the environment navigating with the thumbsticks with movement controller and click on the building with the controllers and get the returned address of the clicked building
 + Geocoding ( C++ class) : handle process geocoding request by location on click by findAddressCandidates | ArcGIS REST APIs
 + VRCharacterController  (Character class): initialize VR origin and camera, set up and execute VR controller input to perform navigation
@@ -15,7 +15,7 @@ Using ArcGIS SDK in Unreal Engine
 	+ XR Grabbable (C++ class) : to hold its grabber information 
 + Tabletop Controller initialize VR origin and camera, set up and execute controller iinput
 	+ XR_Grabber: attached to the right controller to perform grabbing
- ![XR Tabletop Component](./Picture/BXRTabletop.png)
+ ![XR Tabletop Component](./Picture/XRTabletop.png)
 4.	FeatureQuery: This level integrates weather query, feature query, recasting, and material update in ArcGIS map 
 Retrieving real time weather
 + WeatherQuery: A C++ class to retrieve weather data by location from the weather  REST Service,  https://api.weather.gov, parse the weather data to snow, sunny, cloudy, or rainy .The location however hasn’t been dynamically encoded yet. 
@@ -26,5 +26,5 @@ Retrieving real time weather
    ![FeatureQuery after Pins at restaurants' location are spawned](./Picture/FeatureQuery1.png)
 	+ After all the pins are spawned at all the restaurants location, the level blueprint will perform raycasting from the pin location downward to collect any hit buildings 
 	+ Material buffer will be updated to change the material of the restaurant building.
-   ![FeatureQuery after the material of the buildings are updated](./Picture/FeatureQUery2.png)
+   ![FeatureQuery after the material of the buildings are updated](./Picture/FeatureQuery2.png)
 
