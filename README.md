@@ -3,6 +3,8 @@ Using ArcGIS SDK in Unreal Engine
 1.	BuildingExplorer level: Users can explore the structure of the building by interacting with the menu to toggle visibility of different components such as structural, architectural, and electrical component of a building
 + BuildingSceneLayerActor (C++ class) handle layer initialization, generate building filter query by attribute and toggle layer’s visibility
 + Menu interface (Widget Blueprint) that take the discipline list from the actor class to populate selections
+![Building](./Picture/Picture1.png)
+![Building2](./Picture/Picture2.png)
 2.	VR Map level: Users can ‘fly’ in the environment navigating with the thumbsticks with movement controller and click on the building with the controllers and get the returned address of the clicked building
 + Geocoding ( C++ class) : handle process geocoding request by location on click by findAddressCandidates | ArcGIS REST APIs
 + VRCharacterController  (Character class): initialize VR origin and camera, set up and execute VR controller input to perform navigation
@@ -18,7 +20,9 @@ Retrieving real time weather
 	+ A derived BP_Weather: Get actor location and use the parsed weather data to spawn the appropriate Weather Actor (NS_Rain and Thunder actor using Niagary Particle System) 
 		+ BP_Sky: Set the sky’s exposure compensation and rayleigh scattering to create the cloudy, gloomy vs sunny sky effect.
 + Feature Layer: A C++ actor to handle sending and processing feature amenity query (specifically restaurants in NY), then spawn a ArcGIS Pin Actor at that location. 
-	+ ArcGIS Pin: An actor contains ArcGIS Location component to handle the location conversion between the UE world coordinate and ArcGIS coordinate system. 
+	+ ArcGIS Pin: An actor contains ArcGIS Location component to handle the location conversion between the UE world coordinate and ArcGIS coordinate system.
+   ![FeatureQuery after Pins at restaurants' location are spawned](./Picture/FeatureLayer1.png)
 	+ After all the pins are spawned at all the restaurants location, the level blueprint will perform raycasting from the pin location downward to collect any hit buildings 
-	+ Material buffer will be updated to change the material of the restaurant building. 
+	+ Material buffer will be updated to change the material of the restaurant building.
+   ![FeatureQuery after the material of the buildings are updated](./Picture/FeatureLayer2.png)
 
